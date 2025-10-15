@@ -61,7 +61,7 @@ class AuthService {
       options: const AuthenticationOptions(biometricOnly: true),
     );
    
-    if (!didAuthenticate) {
+    if (didAuthenticate) {
       await GetStorage().write('fingerPrintKey',true);
       Navigator.of(context).pushNamedAndRemoveUntil('/home',(route) => false,);
     }
