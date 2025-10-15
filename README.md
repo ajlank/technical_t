@@ -1,16 +1,33 @@
-# statemanagement
+Features
 
-A new Flutter project.
+Firebase Email/Password Authentication
 
-## Getting Started
+Users can sign up and log in using email and password.
 
-This project is a starting point for a Flutter application.
+Fingerprint Authentication (Biometric Login)
 
-A few resources to get you started if this is your first Flutter project:
+After login, users can enable fingerprint authentication for future app unlocks.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The app stores a local flag securely to remember fingerprint login preference.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+On next launch, if fingerprint login is enabled, the user is prompted to unlock with fingerprint.
+
+If authentication fails, is canceled, or not available, the normal login screen is shown.
+
+User Roles
+
+Supports two roles: Admin and Normal User.
+
+Role is determined based on email:
+
+Admin: admin@gmail.com
+
+Normal User: xa@gmail.com
+
+Role-Based Dashboard
+
+After login or successful fingerprint authentication, the dashboard displays the user type (Admin or User).
+
+Logout
+
+Users can log out, clearing authentication and fingerprint login preferences.
