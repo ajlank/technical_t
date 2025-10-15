@@ -51,10 +51,12 @@ class _HomeState extends State<Home> {
     final user = _auth.currentUser;
     final hasFingerprint = gs.read('fingerPrintKey') == true;
 
-    if (user != null && hasFingerprint) {
+
+    if (user != null || hasFingerprint) {
       return const HomeTest();
     } else {
       return const LoginView();
     }
   }
 }
+
